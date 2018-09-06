@@ -10,10 +10,10 @@ pipeline {
     stages {
         stage('gradle clean build') {
             agent {
-                docker {
-                    image 'gradle:4.7-jdk8-alpine'
-                    reuseNode true
-                }
+                //docker {
+                   // image 'gradle:4.7-jdk8-alpine'
+                   // reuseNode true
+               // }
             }
 
             steps {
