@@ -9,12 +9,12 @@ pipeline {
 
    stages {
        stage('gradle clean build') {
-           agent {
-               docker {
-                   image 'gradle:4.7-jdk8-alpine'
-                  reuseNode true
-               }
-           }
+           //agent {
+            //   docker {
+             //      image 'gradle:4.7-jdk8-alpine'
+             //     reuseNode true
+              // }
+          // }
 
            steps {
                script {
@@ -28,7 +28,7 @@ pipeline {
        stage('publish') {
            steps {
                script {
-                   def jarServer = Artifactory.newServer url: 'http://localhost:8081/artifactory/'
+                   def jarServer = Artifactory.newServer url: 'http://localhost:8080/artifactory/'
                    jarServer.username = 'admin'
                    jarServer.password = 'password'
                    def rtGradle = Artifactory.newGradleBuild()
