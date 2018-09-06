@@ -21,9 +21,9 @@ pipeline {
                  //   sh 'gradle clean'
                   //  sh 'gradle :demo-api:build'
                    // sh 'gradle :demo-client:build'
-                }
+             //   }
           //  }
-        }
+      //  }
 
         stage('publish') {
             steps {
